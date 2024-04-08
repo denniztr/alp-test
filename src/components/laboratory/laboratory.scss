@@ -1,0 +1,49 @@
+.background {
+  width: 100%;
+  background-color: rgba(245, 245, 255, 1);
+  margin-bottom: 96px;
+}
+
+.laboratory-wrapper {
+  padding: 48px 0 48px;
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+
+  &__content-container {
+    width: 1020px;
+
+    &_title {
+      font-weight: 600px;
+      font-size: 36px;
+      padding-bottom: 36px;
+    }
+
+    &_description {
+      font-weight: 400;
+      font-size: 21px;
+
+    }
+
+    &_button {
+      border-radius: 8px;
+      padding: 12px 18px 12px 18px;
+      background-color: rgba(115, 123, 225, 1);
+      color: rgb(255, 255, 255);
+      border-color: transparent;
+      font-weight: 400;
+      font-size: 21px;
+      line-height: 29px;
+    }
+  }
+}
+
+.text-2 {
+  padding: 16px 0 36px;
+}
+
+
+.img-lab {
+  width: 332px;
+  height: 314px;
+}

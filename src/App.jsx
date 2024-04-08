@@ -1,12 +1,16 @@
+import MainPage from './pages/MainPage/MainPage';
+
 import './global/styles.scss';
+
+import { Header, Footer } from './components/index'
+
 
 function App() {
   return (
-    <div className="scss">
-      Hello main page!
-      <div className='scss_another'>
-        another div
-      </div>
+    <div className="app">
+      <Header />
+      <MainPage />
+      {/* <Footer /> */}
     </div>
   );
 }

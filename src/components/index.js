@@ -1,0 +1,6 @@
+export * from './header/index'
+export * from './footer/index'
+export * from './bg-component/index'
+export * from './laboratory/index'
+export * from './gallery/index'
+export * from './form/index'

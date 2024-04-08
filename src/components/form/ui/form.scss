@@ -1,0 +1,30 @@
+.form > :not(:last-child) {
+  margin-right: 19px;
+}
+
+.form {
+  // margin-top: 48px;
+  // margin-bottom: 48px;
+
+  &__input {
+    padding: 12px 16px 12px 16px;
+    border-color: transparent;
+    border-radius: 2px;
+    font-weight: 400;
+    font-size: 21px;
+    color: rgba(160, 160, 160, 1);
+  }
+}
+
+.form-button {
+  &__button {
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 21px;
+    background-color: rgba(115, 123, 225, 1);
+    color: white;
+    border: none;
+    // color: rgba(255, 255, 255);
+    padding: 12px 18px 12px 18px;
+  }
+}
