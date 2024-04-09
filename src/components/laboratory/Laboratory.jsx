@@ -1,9 +1,8 @@
 import './laboratory.scss';
 
-
 export const Laboratory = () => {
   return (
-    <section className="background" id='lab'>
+    <section className="background" id="lab">
       <section className="center">
         <div className="laboratory-wrapper">
           <div className="laboratory-content">
@@ -28,7 +27,37 @@ export const Laboratory = () => {
               </p>
             </div>
             <button className="laboratory-content__button">
-              Оставить заявку
+              <span>Оставить заявку</span>
+              <svg
+                className="laboratory-content__button_arrow"
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 12.5H5"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M14 17.5L19 12.5"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M14 7.5L19 12.5"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
             </button>
           </div>
           <div className="laboratory-wrapper_image-desk">

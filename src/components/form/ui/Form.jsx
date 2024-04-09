@@ -3,8 +3,12 @@ import './form.scss';
 import { useForm } from 'react-hook-form';
 
 export const Form = ({ setIsSubmissionSuccessful }) => {
-
-  const { register, handleSubmit, reset } = useForm({
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm({
     defaultValues: {
       name: '',
       surname: '',
@@ -12,51 +16,58 @@ export const Form = ({ setIsSubmissionSuccessful }) => {
     },
   });
 
-  const onSubmit = (values) => {
-    if (
-      values.name === '' ||
-      values.surname === '' ||
-      values.middleName === ''
-    ) {
-      console.log('Нет данных');
-    }
-
-    if (
-      values.name !== '' ||
-      values.surname !== '' ||
-      values.middleName !== ''
-    ) {
-      console.log('Данные отправлены');
-      setIsSubmissionSuccessful(true);
-      reset();
-    }
+  const onSubmit = () => {
+    setIsSubmissionSuccessful(true);
+    reset();
   };
 
   return (
     <form action="" className="form" onSubmit={handleSubmit(onSubmit)}>
-      <div className='form-input_container'>
+      <div className="form-input_container">
         <input
-          {...register('name')}
-          className="form-input_container__input"
+          {...register('name', { required: true })}
+          className={`form-input_container__input ${
+            errors.name && 'input-error'
+          }`}
           type="text"
           placeholder="Фамилия"
         />
         <input
-          {...register('surname')}
-          className="form-input_container__input"
+          {...register('surname', { required: true })}
+          className={`form-input_container__input ${
+            errors.surname && 'input-error'
+          }`}
           type="text"
           placeholder="Имя"
         />
         <input
-          {...register('middleName')}
-          className="form-input_container__input"
+          {...register('middleName', { required: true })}
+          className={`form-input_container__input ${
+            errors.middleName && 'input-error'
+          }`}
           type="text"
           placeholder="Отчество"
         />
       </div>
       <div className="form-button">
         <button className="form-button__button" type="submit">
-          Отправить
+          <span>Отправить</span>
+          <svg
+            className="form-button__button_svg"
+            width="24"
+            height="25"
+            viewBox="0 0 24 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18.5 8.5L10.5 16.5L6 12"
+              stroke="white"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
         </button>
       </div>
     </form>

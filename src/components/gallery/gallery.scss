@@ -50,7 +50,8 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     gap: 24px;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
+    justify-items: center;
 
     &__item {
       display: none;
