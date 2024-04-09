@@ -6,13 +6,13 @@ import {
 } from '../../components/index'
 
 
-export default function MainPage({ setAnchorId }) {
+export default function MainPage() {
   return (
       <>
         <BackgroundComponent />
-        <Laboratory setAnchorId={setAnchorId} />
-        <Gallery setAnchorId={setAnchorId} />
-        <FormSection setAnchorId={setAnchorId} />
+        <Laboratory />
+        <Gallery />
+        <FormSection />
       </>
   );
 }
