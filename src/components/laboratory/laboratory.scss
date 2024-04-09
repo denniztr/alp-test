@@ -7,43 +7,143 @@
 .laboratory-wrapper {
   padding: 48px 0 48px;
   display: flex;
-  flex-direction: row;
-  gap: 48px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
-  &__content-container {
-    width: 1020px;
+  &_image-desk {
+    width: 332px;
+    height: 314px;
 
-    &_title {
-      font-weight: 600px;
-      font-size: 36px;
-      padding-bottom: 36px;
-    }
-
-    &_description {
-      font-weight: 400;
-      font-size: 21px;
-
-    }
-
-    &_button {
-      border-radius: 8px;
-      padding: 12px 18px 12px 18px;
-      background-color: rgba(115, 123, 225, 1);
-      color: rgb(255, 255, 255);
-      border-color: transparent;
-      font-weight: 400;
-      font-size: 21px;
-      line-height: 29px;
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   }
 }
 
-.text-2 {
-  padding: 16px 0 36px;
+.laboratory-content {
+  max-width: 1020px;
+
+  &__title {
+    font-weight: 600px;
+    font-size: 36px;
+    padding-bottom: 36px;
+  }
+
+  &_image-mob {
+    display: none;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 21px;
+    padding-bottom: 36px;
+
+    :first-child {
+      padding-bottom: 18px;
+    }
+  }
+
+  &__button {
+    width: 249px;
+    height: 53px;
+    padding: 12px 18px 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(115, 123, 225, 1);
+    font-weight: 400;
+    font-size: 21px;
+    color: rgba(255, 255, 255, 1);
+  }
 }
 
+@media (max-width: 1351px) { 
+  .laboratory-wrapper {
+    padding: 48px 0 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  
+    &_image-desk {
+      display: none;
+    }
+  }
 
-.img-lab {
-  width: 332px;
-  height: 314px;
+  .laboratory-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &_image-mob {
+      display: block;
+      max-width: 332px;
+      max-height: 314px;
+      margin-bottom: 18px;
+
+      &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+
+    &__button {
+      width: 100%;
+    }
+  }
+
+}
+
+@media (max-width: 900px) {
+
+  .background {
+    margin-bottom: 30px;
+  }
+
+  .laboratory-wrapper {
+    padding: 36px 0 36px;
+
+    &_image-desk {
+      display: none;
+    }
+  }
+
+  .laboratory-content {
+    display: block;
+
+    &__title {
+      font-weight: 600px;
+      font-size: 28px;
+      padding-bottom: 24px;
+    }
+
+    &_image-mob {
+      display: block;
+      max-width: 332px;
+      max-height: 314px;
+      margin-bottom: 0;
+      
+      &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &__description {
+      font-weight: 400;
+      font-size: 18px;
+      padding-top: 24px;
+      line-height: 25px;
+    }
+
+    &__button {
+      width: 223px;
+      height: 49px;
+    }
+  }
 }

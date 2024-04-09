@@ -6,7 +6,7 @@ export const Footer = () => {
       <section className="center">
         <div className='footer-content'>
           <p className='footer-content__title'>Все права защищены Российской Ассоциацией Капибар</p>
-          <a>
+          <a className='footer-content__logo'>
             <svg
               width="194"
               height="30"

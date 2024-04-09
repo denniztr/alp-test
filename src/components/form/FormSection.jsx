@@ -5,7 +5,7 @@ import './formSection.scss';
 export const FormSection = () => {
   return (
     <div className='wrap'>
-      <section className="center">
+      <section className="">
         <div className="form-wrapper">
           <h3 className="form-wrapper__title">Заявка на диагностику</h3>
           <p className="font-wrapper__description">

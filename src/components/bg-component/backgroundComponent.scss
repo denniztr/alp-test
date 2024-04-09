@@ -1,44 +1,47 @@
-.bg {
-  width: 1920px;
+.background-image {
+  max-width: 1920px;
   height: 560px;
-  position: relative;
   margin: 0 auto;
+  background-image: url('../../../public/topBackground.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
 
-.center-bg {
-  max-width: 1440px;
-  width: 1440px;
-  margin: 0 auto;
+.background-text {
+  font-weight: 700;
+  font-size: 48px;
+  display: inline-block;
   position: absolute;
   top: 210px;
-  left: 260px;
-  z-index: 55;
 
-  &__text {
-    width: 623px;
-    font-weight: 700;
-    font-size: 48px;
-    color: rgb(255, 255, 255);
-    background-color: rgba(115, 123, 225, 1);
+  &__top {
     padding: 12px 18px 12px 18px;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(115, 123, 225, 1);
     border-radius: 8px 8px 8px 0px;
   }
 
-  &__text-2 {
-    width: 423px;
-    font-weight: 700;
-    font-size: 48px;
+  &__bottom {
+    padding: 12px 18px 12px 18px;
     color: rgba(115, 123, 225, 1);
-    background-color: rgba(255, 255, 255, 1);
-    padding: 12px 13px 12px 13px;
+    background-color: rgba(233, 234, 249, 1);
+    display: inline-block;
     border-radius: 0 0 8px 8px;
   }
 }
 
-.pic {
+.background-img-item {
+  width: 367px;
+  height: 492px;
+  background-image: url('../../../public/pic.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   position: absolute;
-  top: 69px;
-  left: 1295px;
+  bottom: 0;
+  left: 1168px;
 }
 
 .title {
@@ -47,4 +50,60 @@
   text-align: center;
   font-style: italic;
   padding: 96px 0 96px;
+}
+
+@media (max-width: 1535px) {
+  .background-img-item {
+    left: 900px;
+  }
+}
+
+@media (max-width: 1275px) {
+  .background-text {
+    font-size: 28px;
+  }
+  .background-img-item {
+    left: 700px;
+  }
+}
+
+@media (max-width: 1070px) {
+  .background-img-item {
+    left: 550px;
+  }
+}
+
+@media (max-width: 900px) {
+  .background-image {
+    height: 360px;
+  }
+
+  .background-text {
+    position: inherit;
+    top: 307.5px;
+    z-index: 55;
+    font-size: 24px;
+  }
+
+  .background-img-item {
+    width: 170px;
+    height: 228px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .title {
+    font-size: 18px;
+    text-align: center;
+    font-style: italic;
+    padding: 75px 0 30px 0;
+  }
+}
+
+@media (max-width: 365px) {
+  .background-text {
+    top: 309px;
+    font-size: 22px;
+  }
 }
