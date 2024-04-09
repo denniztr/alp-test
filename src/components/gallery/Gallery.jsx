@@ -3,7 +3,7 @@ import './gallery.scss';
 
 export const Gallery = () => {
   return (
-    <section className="center">
+    <section className="center" id='gallery'>
       <h2 className="gallery-title">Галерея</h2>
       <div className="grid-container">
         <div className="grid-container__item">

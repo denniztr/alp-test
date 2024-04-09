@@ -3,18 +3,16 @@ import {
   Laboratory, 
   Gallery, 
   FormSection,
-  Footer
 } from '../../components/index'
 
 
-export default function MainPage() {
+export default function MainPage({ setAnchorId }) {
   return (
       <>
         <BackgroundComponent />
-        <Laboratory />
-        <Gallery />
-        <FormSection />
-        <Footer />
+        <Laboratory setAnchorId={setAnchorId} />
+        <Gallery setAnchorId={setAnchorId} />
+        <FormSection setAnchorId={setAnchorId} />
       </>
   );
 }

@@ -1,8 +1,9 @@
 import './laboratory.scss';
 
+
 export const Laboratory = () => {
   return (
-    <section className="background">
+    <section className="background" id='lab'>
       <section className="center">
         <div className="laboratory-wrapper">
           <div className="laboratory-content">

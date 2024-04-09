@@ -2,7 +2,14 @@ import './header.scss';
 
 import { nav } from '../../constants/constants';
 
+
 export const Header = () => {
+
+  const scrollToAnchor = (anchorId) => {
+    const section = document.getElementById(anchorId);
+    section.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="center">
       <header className="header">
@@ -71,8 +78,8 @@ export const Header = () => {
         </div>
         <nav className="nav">
           {nav.map((item) => (
-            <a className="nav__link" key={item}>
-              {item}
+            <a className="nav__link" key={item.label} onClick={() => scrollToAnchor(item.anchor)}>
+              {item.label}
             </a>
           ))}
         </nav>
