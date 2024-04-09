@@ -7,12 +7,9 @@ import { Header, Footer } from './components/index';
 function App() {
   return (
     <>
-      {/* <div className="app"> */}
       <Header />
       <MainPage />
-
       {/* <Footer /> */}
-      {/* </div> */}
     </>
   );
 }

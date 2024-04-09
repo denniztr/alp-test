@@ -2,12 +2,9 @@ import './header.scss';
 
 import { nav } from '../../constants/constants';
 
-
 export const Header = () => {
-
   return (
-    <section className='center'>
-
+    <section className="center">
       <header className="header">
         <div className="logo-container">
           <a>
